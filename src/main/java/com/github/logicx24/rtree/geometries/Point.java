@@ -5,6 +5,8 @@ public class Point implements Geometry {
     private final Double x;
     private final Double y;
 
+    private String id;
+
     public Point(Double x, Double y) {
 
         this.x = x;
@@ -18,12 +20,13 @@ public class Point implements Geometry {
 
     @Override
     public String getId() {
-        return null;
+        return id;
     }
 
     @Override
-    public void setId() {
-
+    public Point setId(String id) {
+        this.id = id;
+        return this;
     }
 
     public Double getX() {

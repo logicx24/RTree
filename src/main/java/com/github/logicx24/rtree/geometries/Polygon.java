@@ -10,9 +10,14 @@ public interface Polygon extends Geometry {
 
     List<Point> getPoints();
 
-    Rectangle getMinimumBoundingRectangle();
+    void addPoint(Point point);
+
+    void addPoints(List<Point> points);
 
     Double perimeter();
 
+    void setBoundingRectangle(Rectangle boundingRectangle);
+
+    Double area();
 
 }

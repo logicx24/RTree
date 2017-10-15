@@ -2,7 +2,9 @@ package com.github.logicx24.rtree;
 
 import com.github.logicx24.rtree.geometries.Point;
 import com.github.logicx24.rtree.geometries.Polygon;
+import com.github.logicx24.rtree.geometries.Rectangle;
 
+import java.util.List;
 import java.util.Set;
 
 public interface Node {
@@ -17,5 +19,11 @@ public interface Node {
 
     void addShape(Polygon containedShape);
 
+    List<Point> getAllContainedPoints();
+
     Boolean isLeaf();
+
+    Node setIsLeaf(Boolean isLeaf);
+
+    void setBoundingRectangle(Rectangle boundingRectangle);
 }

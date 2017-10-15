@@ -6,5 +6,5 @@ public interface Geometry {
 
     String getId();
 
-    void setId();
+    Geometry setId(String id);
 }

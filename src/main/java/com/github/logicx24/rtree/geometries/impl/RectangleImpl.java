@@ -26,6 +26,11 @@ public class RectangleImpl extends PolygonImpl implements Rectangle {
 
     @Override
     public Boolean contains(Rectangle rectangle) {
+        return getMinimumBoundingRectangle().contains(rectangle);
+    }
+
+    @Override
+    public Double area() {
         return null;
     }
 }

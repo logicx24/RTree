@@ -1,6 +1,7 @@
 package com.github.logicx24.rtree;
 
 import javax.inject.Inject;
+import javax.inject.Provider;
 
 public class RTree {
 
@@ -8,8 +9,8 @@ public class RTree {
 
     private Splitter splitter;
     private Selector selector;
-    private BoundingRectangleGenerator boundingRectangleGenerator;
-    private Node node;
+
+    private Provider<Node> nodeProvider;
 
     private Node root;
 
@@ -17,15 +18,13 @@ public class RTree {
     public RTree(
             Splitter splitter,
             Selector selector,
-            BoundingRectangleGenerator boundingRectangleGenerator,
-            Node rootNode
+            Provider<Node> nodeProvider
     ) {
 
         this.splitter = splitter;
         this.selector = selector;
-        this.boundingRectangleGenerator = boundingRectangleGenerator;
+        this.nodeProvider = nodeProvider;
 
-        this.root = rootNode;
     }
 
 
