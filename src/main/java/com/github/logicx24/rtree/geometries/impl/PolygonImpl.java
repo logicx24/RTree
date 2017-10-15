@@ -14,6 +14,16 @@ public class PolygonImpl implements Polygon {
     }
 
     @Override
+    public String getId() {
+        return null;
+    }
+
+    @Override
+    public void setId() {
+
+    }
+
+    @Override
     public Boolean contains(Point point) {
         return null;
     }

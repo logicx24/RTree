@@ -17,5 +17,5 @@ public interface Node {
 
     void addShape(Polygon containedShape);
 
-
+    Boolean isLeaf();
 }

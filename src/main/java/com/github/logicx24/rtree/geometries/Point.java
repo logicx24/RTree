@@ -16,6 +16,16 @@ public class Point implements Geometry {
         return null;
     }
 
+    @Override
+    public String getId() {
+        return null;
+    }
+
+    @Override
+    public void setId() {
+
+    }
+
     public Double getX() {
         return x;
     }
